@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AMS Edelmetalle</title>
+  <title>AMS Edelmetalle & Metallhandel</title> <!-- Titel leicht angepasst -->
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -27,12 +27,14 @@
 
     section {
       padding: 2rem;
-      max-width: 800px;
+      max-width: 900px; /* Etwas breiter für die Galerie */
       margin: 0 auto;
     }
 
     h2 {
       color: #b79d5c;
+      text-align: center; /* Zentriert die Überschriften für einen modernen Look */
+      margin-bottom: 1.5rem;
     }
 
     footer {
@@ -41,6 +43,7 @@
       background-color: #eee;
       color: #555;
       font-size: 0.9rem;
+      margin-top: 2rem;
     }
 
     footer a {
@@ -48,6 +51,45 @@
       margin: 0 1rem;
       text-decoration: none;
     }
+    
+    .text-center {
+        text-align: center;
+    }
+
+    /* NEU: Styles für die Bildergalerie */
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem; /* Abstand zwischen den Bildern */
+      justify-content: center;
+      margin-top: 2rem;
+    }
+
+    .gallery-item {
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      overflow: hidden; /* Sorgt dafür, dass die runden Ecken auch beim Bild greifen */
+      text-align: center;
+      flex-basis: 250px; /* Basisbreite für jedes Galerie-Element */
+      flex-grow: 1; /* Erlaubt den Elementen zu wachsen, um den Platz zu füllen */
+    }
+
+    .gallery-item img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .gallery-item p {
+      padding: 1rem;
+      margin: 0;
+      font-weight: bold;
+      color: #333;
+    }
+    /* Ende der neuen Styles */
+
 
     @media (max-width: 600px) {
       header h1 {
@@ -63,23 +105,56 @@
 <body>
 
   <header>
-    <h1>AMS Edelmetalle</h1>
-    <p>Ihr Partner für Gold, Silber & mehr</p>
+    <h1>AMS Edelmetalle & Metallhandel</h1>
+    <p>Ihr Partner für Edelmetalle und Buntmetalle</p>
   </header>
 
-  <section>
+  <section id="ueber-uns">
     <h2>Über uns</h2>
-    <p>Willkommen bei AMS Edelmetalle – wir sind spezialisiert auf den An- und Verkauf von Edelmetallen wie Gold, Silber und Platin. Ob Münzen, Barren oder Altgold – bei uns sind Sie richtig.</p>
+    <!-- Angepasster Text, um alle Metalle abzudecken -->
+    <p class="text-center">
+      Willkommen bei AMS! Wir sind Ihr zuverlässiger Partner für den An- und Verkauf von Metallen.
+      Unser Fokus liegt auf <strong>Edelmetallen</strong> wie Gold, Silber und Platin. Darüber hinaus handeln wir auch mit <strong>Bunt- und Leichtmetallen</strong> wie Messing, Kupfer und Aluminium. Ob Münzen, Barren, Altgold oder Metallschrott – bei uns sind Sie richtig.
+    </p>
+  </section>
 
+  <!-- NEU: Abschnitt für die Bildergalerie -->
+  <section id="ankauf-beispiele">
+    <h2>Ankauf-Beispiele</h2>
+    <div class="gallery">
+      
+      <div class="gallery-item">
+        <!-- WICHTIG: Ersetzen Sie den Dateinamen durch Ihren echten Dateinamen -->
+        <img src="images/aluminium-felge.jpg" alt="Aluminium-Felge Ankauf">
+        <p>Aluminium</p>
+      </div>
+      
+      <div class="gallery-item">
+        <!-- WICHTIG: Ersetzen Sie den Dateinamen durch Ihren echten Dateinamen -->
+        <img src="images/messing-schrott-1.jpg" alt="Messing-Schrott Ankauf">
+        <p>Messing</p>
+      </div>
+      
+      <div class="gallery-item">
+        <!-- WICHTIG: Ersetzen Sie den Dateinamen durch Ihren echten Dateinamen -->
+        <img src="images/messing-schrott-2.jpg" alt="Messing-Fittings Ankauf">
+        <p>Messing-Fittings</p>
+      </div>
+
+    </div>
+  </section>
+  
+  <section id="kontakt">
     <h2>Kontakt</h2>
-    <p>Telefon: <strong>+49 123 456789</strong><br>
+    <p class="text-center">
+       Telefon: <strong>+49 123 456789</strong><br>
        E-Mail: <strong>info@ams-edelmetalle.de</strong><br>
        Adresse: Musterstraße 12, 12345 Musterstadt
     </p>
   </section>
 
   <footer>
-    © 2025 AMS Edelmetalle –
+    © 2025 AMS Edelmetalle & Metallhandel –
     <a href="impressum.html">Impressum</a> |
     <a href="datenschutz.html">Datenschutz</a>
   </footer>
