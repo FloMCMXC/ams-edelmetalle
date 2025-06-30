@@ -3,11 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="AMS Edelmetalle & Metallhandel kauft Gold, Silber, Platin sowie Messing und Aluminium. Faire Preise und schnelle Abwicklung. Kontaktieren Sie uns für ein unverbindliches Angebot." />
+  <!-- NEU: Angepasste Beschreibung für Suchmaschinen -->
+  <meta name="description" content="AMS Metall- & Schrottankauf. Wir kaufen Buntmetalle, Leichtmetalle, Eisen und Schrott zu fairen Preisen. Ankauf von Kupfer, Messing, Aluminium, Zink und mehr." />
   
   <link rel="icon" href="favicon.png" type="image/png">
 
-  <title>AMS Edelmetalle & Metallhandel – Ihr Partner für den Metallankauf</title>
+  <!-- NEU: Angepasster Titel -->
+  <title>AMS Metall- & Schrottankauf – Ihr Partner für die Metallverwertung</title>
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -78,6 +80,9 @@
     p {
         line-height: 1.6;
         text-align: center;
+        max-width: 700px; /* Begrenzt die Breite von Paragraphen für bessere Lesbarkeit */
+        margin-left: auto;
+        margin-right: auto;
     }
     
     ul {
@@ -85,16 +90,20 @@
         padding: 0;
     }
     
-    ul li {
-        margin-bottom: 0.5rem;
-    }
-    
-    /* KORREKTUR 1: Listen sollen linksbündig sein */
     .leistungs-liste li {
         text-align: left;
-        line-height: 1.6;
+        line-height: 1.8;
+        font-size: 1.1rem;
+        margin-bottom: 0.75rem;
     }
-
+    
+    .leistungs-liste i {
+        margin-right: 1rem;
+        color: var(--primary-color);
+        width: 25px; /* Sorgt für perfekte Ausrichtung der Icons */
+        text-align: center;
+    }
+    
     .cta-button {
       display: inline-block;
       background-color: var(--primary-color);
@@ -105,6 +114,7 @@
       border-radius: 5px;
       transition: background-color 0.3s ease;
       margin-top: 1.5rem;
+      font-size: 1.1rem;
     }
 
     .cta-button:hover {
@@ -155,10 +165,9 @@
         box-shadow: 0 6px 12px rgba(0,0,0,0.1);
     }
 
-    /* KORREKTUR 2: Feste Höhe entfernen, damit Bilder nicht verzerrt/beschnitten werden */
     .gallery-item img {
       max-width: 100%;
-      height: auto; /* Lässt das Bild die Höhe automatisch bestimmen */
+      height: auto;
       display: block;
     }
 
@@ -196,30 +205,31 @@
 <body>
 
   <header>
-    <h1>AMS EDELMETALLE</h1>
-    <p>Ihr Partner für Edelmetalle & Buntmetalle</p>
+    <h1>AMS METALL & SCHROTT</h1>
+    <p>Ihr zuverlässiger Partner für den Metallankauf</p>
   </header>
 
-  <section id="leistungen">
-    <h2>Unsere Leistungen</h2>
-    <p>Wir sind Ihr zuverlässiger Partner für den An- und Verkauf von Metallen. Bringen Sie uns Ihre Schätze – wir bieten faire, tagesaktuelle Preise und eine unkomplizierte Abwicklung.</p>
+  <section id="ankauf">
+    <h2>Unser Ankauf – Fair & Transparent</h2>
+    <p>Wir sind auf den Ankauf von Metallen und Schrott von Privat- und Gewerbekunden spezialisiert. Verwandeln Sie Ihr Altmetall in bares Geld – wir bieten tagesaktuelle, faire Preise und eine schnelle, unkomplizierte Abwicklung direkt bei uns vor Ort.</p>
     
-    <!-- Die Klasse "leistungs-liste" wurde hier hinzugefügt, um die Korrektur anzuwenden -->
-    <div class="leistungs-liste" style="display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center; text-align: left; margin-top: 2rem;">
+    <div class="leistungs-liste" style="display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center; margin-top: 2.5rem;">
         <div>
-            <h3>Edelmetalle</h3>
+            <h3>Bunt- & Leichtmetalle</h3>
             <ul>
-                <li><i class="fa-solid fa-gem" style="color: var(--primary-color);"></i> Gold (Schmuck, Münzen, Barren, Zahngold)</li>
-                <li><i class="fa-solid fa-gem" style="color: #c0c0c0;"></i> Silber (Besteck, Münzen, Barren)</li>
-                <li><i class="fa-solid fa-gem" style="color: #e5e4e2;"></i> Platin & Palladium</li>
+                <li><i class="fa-solid fa-gear"></i> Kupfer & Kabel</li>
+                <li><i class="fa-solid fa-faucet"></i> Messing & Rotguss</li>
+                <li><i class="fa-solid fa-car"></i> Aluminium</li>
+                <li><i class="fa-solid fa-battery-full"></i> Blei & Zink</li>
             </ul>
         </div>
         <div>
-            <h3>Weitere Metalle</h3>
+            <h3>Eisen & Schrott</h3>
             <ul>
-                <li><i class="fa-solid fa-gear" style="color: #b87333;"></i> Kupfer & Messing</li>
-                <li><i class="fa-solid fa-car-side" style="color: #808080;"></i> Aluminium & Zink</li>
-                <li><i class="fa-solid fa-battery-three-quarters" style="color: #666;"></i> Blei & Zinn</li>
+                <li><i class="fa-solid fa-magnet"></i> Mischschrott & Stahlschrott</li>
+                <li><i class="fa-solid fa-cogs"></i> Maschinenteile & Träger</li>
+                <li><i class="fa-solid fa-recycle"></i> Gusseisen</li>
+                <li><i class="fa-solid fa-warehouse"></i> Industriemetalle</li>
             </ul>
         </div>
     </div>
@@ -229,23 +239,23 @@
     <h2>Ankauf-Beispiele</h2>
     <div class="gallery">
       <div class="gallery-item">
-        <img src="images/aluminium-felge.jpg" alt="Ankauf Aluminium Felge">
+        <img src="images/aluminium-felge.jpg" alt="Ankauf von Aluminium Felgen">
         <p>Aluminium Felgen</p>
       </div>
       <div class="gallery-item">
-        <img src="images/messing-schrott-1.jpg" alt="Ankauf Messing Schrott">
-        <p>Messing-Schrott</p>
+        <img src="images/messing-schrott-1.jpg" alt="Ankauf von gemischtem Messing Schrott">
+        <p>Messingschrott</p>
       </div>
       <div class="gallery-item">
-        <img src="images/messing-schrott-2.jpg" alt="Ankauf Messing Fittings">
-        <p>Messing-Schrott</p>
+        <img src="images/messing-schrott-2.jpg" alt="Ankauf von Messing Fittings aus dem Sanitärbereich">
+        <p>Sanitär-Messing</p>
       </div>
     </div>
   </section>
   
   <section id="kontakt">
     <h2>Kontaktieren Sie uns</h2>
-    <p>Haben Sie Fragen oder möchten ein unverbindliches Angebot? Wir sind für Sie da!</p>
+    <p>Sie haben Fragen zu Preisen oder zur Anlieferung? Rufen Sie uns an oder schreiben Sie uns eine E-Mail. Wir helfen Ihnen gerne weiter!</p>
     <div class="contact-info" style="text-align: center; margin-top: 2rem;">
        <a href="tel:+49123456789"><i class="fa-solid fa-phone"></i>+49 123 456789</a>
        <a href="mailto:info@ams-edelmetalle.de"><i class="fa-solid fa-envelope"></i>info@ams-edelmetalle.de</a>
@@ -253,12 +263,13 @@
     </div>
     
     <div style="text-align: center;">
-        <a href="mailto:info@ams-edelmetalle.de" class="cta-button">Jetzt Angebot anfragen</a>
+        <a href="mailto:info@ams-edelmetalle.de" class="cta-button">Jetzt Schrott verkaufen</a>
     </div>
   </section>
 
   <footer>
-    © 2025 AMS Edelmetalle & Metallhandel –
+    <!-- Der Footer-Text könnte ebenfalls angepasst werden -->
+    © 2025 AMS Metall & Schrott –
     <a href="impressum.html">Impressum</a> |
     <a href="datenschutz.html">Datenschutz</a>
   </footer>
