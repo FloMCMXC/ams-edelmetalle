@@ -3,15 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- NEU: Meta-Beschreibung für Suchmaschinen -->
   <meta name="description" content="AMS Edelmetalle & Metallhandel kauft Gold, Silber, Platin sowie Messing und Aluminium. Faire Preise und schnelle Abwicklung. Kontaktieren Sie uns für ein unverbindliches Angebot." />
   
-  <!-- NEU: Favicon für den Browser-Tab -->
   <link rel="icon" href="favicon.png" type="image/png">
 
   <title>AMS Edelmetalle & Metallhandel – Ihr Partner für den Metallankauf</title>
   
-  <!-- NEU: Einbindung von Google Fonts und Font Awesome Icons -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Teko:wght@500&display=swap" rel="stylesheet">
@@ -19,17 +16,17 @@
 
   <style>
     :root {
-      --primary-color: #b79d5c; /* Goldton als Variable */
-      --dark-color: #2c3e50; /* Dunkelblau/Grau statt reinem Schwarz */
+      --primary-color: #b79d5c;
+      --dark-color: #2c3e50;
       --light-gray: #f4f4f4;
     }
 
     html {
-      scroll-behavior: smooth; /* Sorgt für weiches Scrollen bei internen Links */
+      scroll-behavior: smooth;
     }
 
     body {
-      font-family: 'Roboto', sans-serif; /* NEU: Professionellere Schriftart */
+      font-family: 'Roboto', sans-serif;
       margin: 0;
       padding: 0;
       background: #fff;
@@ -44,7 +41,7 @@
     }
 
     header h1 {
-      font-family: 'Teko', sans-serif; /* NEU: Markante Schrift für die Überschrift */
+      font-family: 'Teko', sans-serif;
       margin: 0;
       font-size: 3rem;
       color: var(--primary-color);
@@ -58,7 +55,7 @@
     }
     
     section:nth-child(even) {
-        background-color: var(--light-gray); /* Abwechselnde Hintergrundfarben */
+        background-color: var(--light-gray);
     }
 
     h2 {
@@ -69,7 +66,6 @@
       position: relative;
     }
 
-    /* Kleiner Unterstrich unter den Überschriften */
     h2::after {
         content: '';
         display: block;
@@ -79,7 +75,7 @@
         margin: 0.5rem auto 0;
     }
     
-    p, li {
+    p {
         line-height: 1.6;
         text-align: center;
     }
@@ -92,8 +88,13 @@
     ul li {
         margin-bottom: 0.5rem;
     }
+    
+    /* KORREKTUR 1: Listen sollen linksbündig sein */
+    .leistungs-liste li {
+        text-align: left;
+        line-height: 1.6;
+    }
 
-    /* NEU: Call-to-Action Button */
     .cta-button {
       display: inline-block;
       background-color: var(--primary-color);
@@ -110,7 +111,6 @@
       background-color: #a28a4a;
     }
     
-    /* Kontakt-Links mit Icons */
     .contact-info a {
         color: #333;
         text-decoration: none;
@@ -127,7 +127,7 @@
     .contact-info i {
         margin-right: 0.75rem;
         color: var(--primary-color);
-        width: 20px; /* Sorgt für gleiche Ausrichtung */
+        width: 20px;
     }
 
     .gallery {
@@ -155,10 +155,10 @@
         box-shadow: 0 6px 12px rgba(0,0,0,0.1);
     }
 
+    /* KORREKTUR 2: Feste Höhe entfernen, damit Bilder nicht verzerrt/beschnitten werden */
     .gallery-item img {
       max-width: 100%;
-      height: 200px;
-      object-fit: cover; /* Sorgt dafür, dass alle Bilder gleich hoch sind */
+      height: auto; /* Lässt das Bild die Höhe automatisch bestimmen */
       display: block;
     }
 
@@ -204,7 +204,8 @@
     <h2>Unsere Leistungen</h2>
     <p>Wir sind Ihr zuverlässiger Partner für den An- und Verkauf von Metallen. Bringen Sie uns Ihre Schätze – wir bieten faire, tagesaktuelle Preise und eine unkomplizierte Abwicklung.</p>
     
-    <div style="display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center; text-align: left; margin-top: 2rem;">
+    <!-- Die Klasse "leistungs-liste" wurde hier hinzugefügt, um die Korrektur anzuwenden -->
+    <div class="leistungs-liste" style="display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center; text-align: left; margin-top: 2rem;">
         <div>
             <h3>Edelmetalle</h3>
             <ul>
@@ -246,13 +247,11 @@
     <h2>Kontaktieren Sie uns</h2>
     <p>Haben Sie Fragen oder möchten ein unverbindliches Angebot? Wir sind für Sie da!</p>
     <div class="contact-info" style="text-align: center; margin-top: 2rem;">
-       <!-- NEU: Klickbare Links mit Icons -->
        <a href="tel:+49123456789"><i class="fa-solid fa-phone"></i>+49 123 456789</a>
        <a href="mailto:info@ams-edelmetalle.de"><i class="fa-solid fa-envelope"></i>info@ams-edelmetalle.de</a>
        <p style="margin-top: 1rem;"><i class="fa-solid fa-map-marker-alt"></i>Musterstraße 12, 12345 Musterstadt</p>
     </div>
     
-    <!-- NEU: Call-to-Action Button -->
     <div style="text-align: center;">
         <a href="mailto:info@ams-edelmetalle.de" class="cta-button">Jetzt Angebot anfragen</a>
     </div>
