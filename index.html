@@ -3,64 +3,137 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AMS Edelmetalle & Metallhandel</title> <!-- Titel leicht angepasst -->
+  <!-- NEU: Meta-Beschreibung für Suchmaschinen -->
+  <meta name="description" content="AMS Edelmetalle & Metallhandel kauft Gold, Silber, Platin sowie Messing und Aluminium. Faire Preise und schnelle Abwicklung. Kontaktieren Sie uns für ein unverbindliches Angebot." />
+  
+  <!-- NEU: Favicon für den Browser-Tab -->
+  <link rel="icon" href="favicon.png" type="image/png">
+
+  <title>AMS Edelmetalle & Metallhandel – Ihr Partner für den Metallankauf</title>
+  
+  <!-- NEU: Einbindung von Google Fonts und Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Teko:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
   <style>
+    :root {
+      --primary-color: #b79d5c; /* Goldton als Variable */
+      --dark-color: #2c3e50; /* Dunkelblau/Grau statt reinem Schwarz */
+      --light-gray: #f4f4f4;
+    }
+
+    html {
+      scroll-behavior: smooth; /* Sorgt für weiches Scrollen bei internen Links */
+    }
+
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Roboto', sans-serif; /* NEU: Professionellere Schriftart */
       margin: 0;
       padding: 0;
-      background: #f8f8f8;
-      color: #222;
+      background: #fff;
+      color: #333;
     }
 
     header {
-      background-color: #b79d5c;
+      background-color: var(--dark-color);
       color: white;
       padding: 2rem 1rem;
       text-align: center;
     }
 
     header h1 {
+      font-family: 'Teko', sans-serif; /* NEU: Markante Schrift für die Überschrift */
       margin: 0;
-      font-size: 2rem;
+      font-size: 3rem;
+      color: var(--primary-color);
+      letter-spacing: 1px;
     }
 
     section {
-      padding: 2rem;
-      max-width: 900px; /* Etwas breiter für die Galerie */
+      padding: 3rem 1.5rem;
+      max-width: 900px;
       margin: 0 auto;
+    }
+    
+    section:nth-child(even) {
+        background-color: var(--light-gray); /* Abwechselnde Hintergrundfarben */
     }
 
     h2 {
-      color: #b79d5c;
-      text-align: center; /* Zentriert die Überschriften für einen modernen Look */
-      margin-bottom: 1.5rem;
-    }
-
-    footer {
+      color: var(--dark-color);
       text-align: center;
-      padding: 1rem;
-      background-color: #eee;
-      color: #555;
-      font-size: 0.9rem;
-      margin-top: 2rem;
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      position: relative;
     }
 
-    footer a {
-      color: #555;
-      margin: 0 1rem;
-      text-decoration: none;
+    /* Kleiner Unterstrich unter den Überschriften */
+    h2::after {
+        content: '';
+        display: block;
+        width: 60px;
+        height: 3px;
+        background: var(--primary-color);
+        margin: 0.5rem auto 0;
     }
     
-    .text-center {
+    p, li {
+        line-height: 1.6;
         text-align: center;
     }
+    
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    ul li {
+        margin-bottom: 0.5rem;
+    }
 
-    /* NEU: Styles für die Bildergalerie */
+    /* NEU: Call-to-Action Button */
+    .cta-button {
+      display: inline-block;
+      background-color: var(--primary-color);
+      color: white;
+      padding: 1rem 2rem;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+      margin-top: 1.5rem;
+    }
+
+    .cta-button:hover {
+      background-color: #a28a4a;
+    }
+    
+    /* Kontakt-Links mit Icons */
+    .contact-info a {
+        color: #333;
+        text-decoration: none;
+        font-size: 1.1rem;
+        display: block;
+        margin: 0.5rem 0;
+        transition: color 0.3s ease;
+    }
+    
+    .contact-info a:hover {
+        color: var(--primary-color);
+    }
+    
+    .contact-info i {
+        margin-right: 0.75rem;
+        color: var(--primary-color);
+        width: 20px; /* Sorgt für gleiche Ausrichtung */
+    }
+
     .gallery {
       display: flex;
       flex-wrap: wrap;
-      gap: 1.5rem; /* Abstand zwischen den Bildern */
+      gap: 1.5rem;
       justify-content: center;
       margin-top: 2rem;
     }
@@ -69,16 +142,23 @@
       background: white;
       border: 1px solid #ddd;
       border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      overflow: hidden; /* Sorgt dafür, dass die runden Ecken auch beim Bild greifen */
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      overflow: hidden;
       text-align: center;
-      flex-basis: 250px; /* Basisbreite für jedes Galerie-Element */
-      flex-grow: 1; /* Erlaubt den Elementen zu wachsen, um den Platz zu füllen */
+      flex-basis: 250px;
+      flex-grow: 1;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .gallery-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 12px rgba(0,0,0,0.1);
     }
 
     .gallery-item img {
       max-width: 100%;
-      height: auto;
+      height: 200px;
+      object-fit: cover; /* Sorgt dafür, dass alle Bilder gleich hoch sind */
       display: block;
     }
 
@@ -86,18 +166,29 @@
       padding: 1rem;
       margin: 0;
       font-weight: bold;
-      color: #333;
+      color: var(--dark-color);
     }
-    /* Ende der neuen Styles */
+    
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      background-color: var(--dark-color);
+      color: #ccc;
+      font-size: 0.9rem;
+    }
 
+    footer a {
+      color: #fff;
+      margin: 0 1rem;
+      text-decoration: none;
+    }
 
     @media (max-width: 600px) {
       header h1 {
-        font-size: 1.5rem;
+        font-size: 2.5rem;
       }
-
       section {
-        padding: 1rem;
+        padding: 2rem 1rem;
       }
     }
   </style>
@@ -105,52 +196,66 @@
 <body>
 
   <header>
-    <h1>AMS Edelmetalle & Metallhandel</h1>
-    <p>Ihr Partner für Edelmetalle und Buntmetalle</p>
+    <h1>AMS EDELMETALLE</h1>
+    <p>Ihr Partner für Edelmetalle & Buntmetalle</p>
   </header>
 
-  <section id="ueber-uns">
-    <h2>Über uns</h2>
-    <!-- Angepasster Text, um alle Metalle abzudecken -->
-    <p class="text-center">
-      Willkommen bei AMS! Wir sind Ihr zuverlässiger Partner für den An- und Verkauf von Metallen.
-      Unser Fokus liegt auf <strong>Edelmetallen</strong> wie Gold, Silber und Platin. Darüber hinaus handeln wir auch mit <strong>Bunt- und Leichtmetallen</strong> wie Messing, Kupfer und Aluminium. Ob Münzen, Barren, Altgold oder Metallschrott – bei uns sind Sie richtig.
-    </p>
+  <section id="leistungen">
+    <h2>Unsere Leistungen</h2>
+    <p>Wir sind Ihr zuverlässiger Partner für den An- und Verkauf von Metallen. Bringen Sie uns Ihre Schätze – wir bieten faire, tagesaktuelle Preise und eine unkomplizierte Abwicklung.</p>
+    
+    <div style="display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center; text-align: left; margin-top: 2rem;">
+        <div>
+            <h3>Edelmetalle</h3>
+            <ul>
+                <li><i class="fa-solid fa-gem" style="color: var(--primary-color);"></i> Gold (Schmuck, Münzen, Barren, Zahngold)</li>
+                <li><i class="fa-solid fa-gem" style="color: #c0c0c0;"></i> Silber (Besteck, Münzen, Barren)</li>
+                <li><i class="fa-solid fa-gem" style="color: #e5e4e2;"></i> Platin & Palladium</li>
+            </ul>
+        </div>
+        <div>
+            <h3>Weitere Metalle</h3>
+            <ul>
+                <li><i class="fa-solid fa-gear" style="color: #b87333;"></i> Kupfer & Messing</li>
+                <li><i class="fa-solid fa-car-side" style="color: #808080;"></i> Aluminium & Zink</li>
+                <li><i class="fa-solid fa-battery-three-quarters" style="color: #666;"></i> Blei & Zinn</li>
+            </ul>
+        </div>
+    </div>
   </section>
 
-  <!-- NEU: Abschnitt für die Bildergalerie -->
   <section id="ankauf-beispiele">
     <h2>Ankauf-Beispiele</h2>
     <div class="gallery">
-      
       <div class="gallery-item">
-        <!-- WICHTIG: Ersetzen Sie den Dateinamen durch Ihren echten Dateinamen -->
-        <img src="images/aluminium-felge.jpg" alt="Aluminium-Felge Ankauf">
-        <p>Aluminium</p>
+        <img src="images/aluminium-felge.jpg" alt="Ankauf Aluminium Felge">
+        <p>Aluminium Felgen</p>
       </div>
-      
       <div class="gallery-item">
-        <!-- WICHTIG: Ersetzen Sie den Dateinamen durch Ihren echten Dateinamen -->
-        <img src="images/messing-schrott-1.jpg" alt="Messing-Schrott Ankauf">
-        <p>Messing</p>
+        <img src="images/messing-schrott-1.jpg" alt="Ankauf Messing Schrott">
+        <p>Messing-Schrott</p>
       </div>
-      
       <div class="gallery-item">
-        <!-- WICHTIG: Ersetzen Sie den Dateinamen durch Ihren echten Dateinamen -->
-        <img src="images/messing-schrott-2.jpg" alt="Messing-Fittings Ankauf">
-        <p>Messing</p>
+        <img src="images/messing-schrott-2.jpg" alt="Ankauf Messing Fittings">
+        <p>Messing-Fittings</p>
       </div>
-
     </div>
   </section>
   
   <section id="kontakt">
-    <h2>Kontakt</h2>
-    <p class="text-center">
-       Telefon: <strong>+49 123 456789</strong><br>
-       E-Mail: <strong>info@ams-edelmetalle.de</strong><br>
-       Adresse: Musterstraße 12, 12345 Musterstadt
-    </p>
+    <h2>Kontaktieren Sie uns</h2>
+    <p>Haben Sie Fragen oder möchten ein unverbindliches Angebot? Wir sind für Sie da!</p>
+    <div class="contact-info" style="text-align: center; margin-top: 2rem;">
+       <!-- NEU: Klickbare Links mit Icons -->
+       <a href="tel:+49123456789"><i class="fa-solid fa-phone"></i>+49 123 456789</a>
+       <a href="mailto:info@ams-edelmetalle.de"><i class="fa-solid fa-envelope"></i>info@ams-edelmetalle.de</a>
+       <p style="margin-top: 1rem;"><i class="fa-solid fa-map-marker-alt"></i>Musterstraße 12, 12345 Musterstadt</p>
+    </div>
+    
+    <!-- NEU: Call-to-Action Button -->
+    <div style="text-align: center;">
+        <a href="mailto:info@ams-edelmetalle.de" class="cta-button">Jetzt Angebot anfragen</a>
+    </div>
   </section>
 
   <footer>
